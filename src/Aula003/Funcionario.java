@@ -1,16 +1,16 @@
 package Aula003;
 
-public class Funcionarios {
+public class Funcionario {
     String nome;
     double horasTrabalhadas;
     double valorHora;
-    boolean isMensalista;
+    double salario;
 
-    public Funcionarios(String nome, double horasTrabalhadas, double valorHora, boolean isMensalista) {
+    public Funcionario(String nome, double horasTrabalhadas, double valorHora, double salario) {
         this.nome = nome;
         this.horasTrabalhadas = horasTrabalhadas;
         this.valorHora = valorHora;
-        this.isMensalista = isMensalista;
+
     }
 
     public String getNome() {
@@ -37,13 +37,17 @@ public class Funcionarios {
         this.valorHora = valorHora;
     }
 
-    public boolean isMensalista() {
-        return isMensalista;
+
+
+
+
     }
 
-    public void setMensalista(boolean mensalista) {
-        isMensalista = mensalista;
-    }
-}
+
+
+
+
+
+
 
 
