@@ -18,19 +18,16 @@ public class Horista extends Funcionario { //refactory parameters
     }
 
     public double horasExtras() {
-        double qtdHorasExtras = horasExtras;
-        if(qtdHorasExtras <= 2){
-            this.horasExtras = qtdHorasExtras;
+        if(this.horasExtras <= 2){
             double valorHora70 = valorHora + (valorHora * 0.7) ;
-            return qtdHorasExtras * valorHora70;
+            return this.horasExtras * valorHora70;
         } else{
-            return (valorHora * horasExtras ) * 2;
+            return (valorHora * this.horasExtras ) * 2;
         }
-
     }
 
     public static void main(String[] args) {
-        Horista horista = new Horista("Luiz", 1, 8, 2);
+        Horista horista = new Horista("Luiz", 1, 8, 3);
         System.out.println(horista.salario());
     }
 }
