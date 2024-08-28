@@ -1,10 +1,11 @@
 package aula3.exercicio.empresa;
 
-public class Funcionario {
-    String nome;
-    double valorHora;
-    double qtdHora;
-    double salario;
+public abstract class Funcionario {
+    private String nome;
+    private double valorHora;
+    private double qtdHora;
+    private double salario;
+    private boolean isMensalista;
 
 //construtor
     public Funcionario(String nome, double valorHora, double qtdHora, double salario) {
@@ -12,6 +13,7 @@ public class Funcionario {
         this.valorHora = valorHora;
         this.qtdHora = qtdHora;
         this.salario = salario;
+        this.isMensalista = isMensalista;
     }
 //getters and setters
 
@@ -35,6 +37,10 @@ public class Funcionario {
         return qtdHora;
     }
 
+    public boolean isMensalista() {
+        return isMensalista;
+    }
+
     public void setQtdHora(double qtdHora) {
         this.qtdHora = qtdHora;
     }
@@ -47,6 +53,14 @@ public class Funcionario {
         this.salario = salario;
     }
 
-// métodos
+    public void setMensalista(boolean mensalista) {
+        isMensalista = mensalista;
+    }
 
+    // métodos
+   public double salario(double salario){
+        return salario;
+   }
+
+    public abstract double salario();
 }
